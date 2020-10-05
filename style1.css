@@ -1,0 +1,306 @@
+*
+@charset "utf-8"
+
+body{
+	font-family: 'Antic Slab', serif;
+
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav {
+	background: black;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+}
+
+#nav h1{
+	text-align: center;
+}
+
+#nav h1 a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 42px;
+
+}
+
+#nav2{
+	background: black;
+	opacity: 70%;
+	width: 100%
+	height: 50px;
+	line-height: 50px;
+}
+
+#nav2 ul {
+	text-align: center;
+}
+
+#nav2 ul li {
+	text-decoration: none;
+	list-style-type: none;
+	display: inline-block;
+}
+
+#nav2 ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 25px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#nav2 ul li :hover
+{
+	background: yellow;
+	transition: all ease-in-out 0.40s;
+	height: 5px;
+	line-height: 5px;
+	width: 50px;
+}
+
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#bsbg {
+	background: url("bsbg.jpg") no-repeat;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;	
+}
+
+
+
+.imgev {
+	height: 250px;
+	width: 250px;
+}
+
+.front1, .back1{
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.front1 {
+	background: url("booksign2.jpg");
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back1 {
+	background: url("booksign1.jpg");
+	z-index: 1;
+}
+
+.front2, .back2{
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.front2 {
+	background: url("bookclub9.jpg");
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back2 {
+	background: url("bookclub92.jpg");
+	z-index: 1;
+}
+
+.front3, .back3{
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.front3 {
+	background: url("litcomp9.jpg");
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back3 {
+	background: url("litcomp92.jpg");
+	z-index: 1;
+}
+
+.front4, .back4{
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+.front4 {
+	background: url("theatre91.jpg");
+	z-index: 2;
+	backface-visibility: hidden;
+}
+
+.back4 {
+	background: url("theatre92.jpg");
+	z-index: 1;
+}
+
+
+
+.container1 .card .imgev:hover  {
+	transform: rotateY(180deg);
+
+}
+
+
+.container1 {
+	position: relative;
+	width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+	margin-left: 250px;
+	margin-top: 50px;
+	
+}
+
+.container1 .card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: #fff1e6;
+	width: 100%;
+}
+
+.container1 .card:nth-child(even) {
+	flex-direction: column-reverse;
+}
+
+.container1 .card .imgev {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	transition: all 1s linear;
+	transform-style: preserve-3d;
+}
+
+
+
+.container1 .card .content {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container1 .card .content div {
+	padding: 20px;
+	text-align: center;
+}
+
+@media (max-width: 1000px) {
+	.container1 {
+
+		grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+		margin: 50px;
+	}
+
+	.container1 .card {
+
+		flex-direction: row;
+		margin: 10px 0;
+	}
+
+	.container1 .card:nth-child(even) {
+
+		flex-direction: row-reverse;
+	}
+
+	.container1 .card .imgev, .container1 .card .content {
+		width: 50%;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.container1 .card {
+
+		flex-direction: column;
+		margin: 10px 0;
+	}
+
+	.container1 .card:nth-child(even) {
+
+		flex-direction: column;
+	}
+
+	.container1 .card .imgev, .container1 .card .content {
+
+		width: 100%;
+	}
+
+	.container1 .card .content {
+		height: 200px;
+	}
+
+
+}
+
+
+footer {
+	height: 200px;
+	background: #000;
+	padding: 50px;
+	text-align: center;
+}
+
+.ig {
+	color: #FA8E90;
+	padding: 10px;
+	size: 50px;
+}
+
+.twit {
+	color: #8EB1FA;
+	padding: 10px;
+	size: 50px;
+}
+
+.face {
+	color: #908EFA;
+	padding: 10px;
+	size: 50px;
+}
+
+.gp {
+	color: #FA8E90;
+	padding:10px;
+	size: 50px;
+
+}
